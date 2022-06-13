@@ -38,17 +38,25 @@ body {
   letter-spacing: 0.03em;
   color: var(--color-main);
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* -------HEADER--------- */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+/* -------HEADER--------- */
+
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -123,7 +131,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-main);
-  padding: 15px 0;
   display: flex;
   align-items: center;
 }
@@ -155,9 +162,11 @@ body {
     url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 1600px 600px;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .head-title {
@@ -196,7 +205,7 @@ body {
   margin-bottom: 30px;
 }
 
-.icon-about-item {
+.icon-about-container {
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -204,6 +213,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .icon-about {
@@ -315,6 +325,7 @@ body {
 
 .profession {
   text-align: center;
+  margin-bottom: 28px;
 }
 
 .developers .social-items {
@@ -344,8 +355,8 @@ body {
   margin-right: 10px;
 }
 
-.developers .icon-soc-link:hover,
-.developers .icon-soc-link:focus {
+.icon-soc-link:hover,
+.icon-soc-link:focus {
   fill: #ffffff;
   background-color: var(--color-accent);
 }
@@ -390,7 +401,7 @@ body {
 }
 
 .icon-client-link:hover {
-  border: 1px solid var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
@@ -472,12 +483,11 @@ body {
   fill: #ffffff;
 }
 
-.footer .icon-item-social:hover,
-.footer .icon-item-social:focus {
-  background-color: #2196f3;
-}
-
 /* --------------PORTFOLIO------------------ */
+
+.example-link {
+  text-decoration: none;
+}
 
 .example {
   padding-top: 94px;
@@ -540,13 +550,20 @@ body {
 .example-text {
   font-size: 16px;
   line-height: 1.88;
+  color: var(--color-main);
 }
 
 .example-item {
   width: 370px;
   border-bottom: 1px solid #eee;
 }
-.example-item:hover {
+
+.example-link {
+  display: block;
+}
+
+.example-link:hover,
+.example-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
